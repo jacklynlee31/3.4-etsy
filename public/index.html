@@ -9,6 +9,23 @@
 </head>
 <body>
 
+<div class="content">
+</div>
+<template id="main-template">
+	{{#each results}}
+		{{>article article=this}}
+	{{/each}}
+</template>
+
+<template id="article-partial">
+	<article>
+	    <img src="{{ article.Images.[0].url_fullxfull }}" alt="painting">
+		<span class="title">{{ article.Title }}</span>
+		<span class="shop">{{ article.shop }}</span>
+		<div class="price">{{ article.price }} {{ article.currency_code }}</div>
+	</article>
+</template>
+
 <script src="jquery/dist/jquery.min.js"></script>
 <script src="handlebars/handlebars.js"></script>
 <script src="load-etsy.js"></script>

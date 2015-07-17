@@ -13,6 +13,7 @@ var loadEtsy = function (query, onload, immediate) {
         dataType: 'jsonp',
         success: onload
     });
-
-    immediate();
+    if (immediate) {
+    	immediate();
+    }
 };
