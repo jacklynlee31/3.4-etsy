@@ -5,6 +5,14 @@ $fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
 @import 'bourbon';
 @import 'neat';
 
+$page: #F2F3EE;
+$etsy: #F04C06;
+$blue: #4199B9;
+$icons: #535353;
+$money: #67B733;
+$shopname: #B5A2A2;
+$border: #D0D0CB;
+
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
@@ -15,7 +23,54 @@ html {
 
 // Your SASS Journey Starts Here
 
+.top {
+	background-color: white;
+}
+.title {
+
+}
+
+.shop_name {
+
+}
+
+.price {
+
+}
+
+.page {
+	padding: 1em;
+	background-color: $page;
+	padding-left: 5em;
+	@include outer-container;
+}
+
+.left {
+	font-family: Arial,sans-serif;
+	font-size: 13px;
+	padding: 1em;
+	border-radius: .2em;
+	@include span-columns(3);
+}
+
+.left-one {
+	background-color: white;
+	padding: 1em;
+	border: 1px solid $border;
+}
+
+.left li a{
+	color: $blue;
+	text-decoration: none;
+	line-height: 1.4;
+}
+
+.content {
+	background-color: $page;
+	padding-top: 1.65em;
+	@include span-columns(8);
+}
+
 img {
 	width: 100px;
-	display: block;
 }
