@@ -1,73 +1,74 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="app.css">
+    	<link rel="stylesheet" href="app.css">
     <title>Etsy</title>
 </head>
 <body>
 
-<div class="everything">
-
 <div class="top">
-	<h2 class="etsy">
-		Etsy
-	</h2>
+	<h2 class="etsy">Etsy</h2>
 	<form>
 		<input type="text" placeholder="Search" required>
 		<input type="button" value="Search">
 	</form>
-	<ul class="menu">
-		<li class="browse">
-			Browse
-		</li>
-	</ul>
 	<div class="top-right">
-		<span class="home">
+		<div class="icon">
+			<span class="home">
+			<i class="fa fa-home"></i>
 			Home
-		</span>
-		<span class="favorites">
+			</span>
+		</div>
+		<div class="icon">
+			<span class="favorites">
+			<i class="fa fa-favorites"></i>
 			Favorites
-		</span>
-		<span class="you">
+			</span>
+		</div>
+		<div class="icon">
+			<span class="user">
+			<i class="fa fa-user"></i>
 			You
-		</span>
-		<span class="cart">
+			</span>
+		</div>
+		<div class="icon">
+			<span class="cart">
+			<i class="fa fa-cart"></i>
 			Cart
-		</span>
+			</span>
+		</div>
 	</div>
 </div>
 
-<div class="page">
+<div class="main-body">
 
 <div class="left">
 	<span class="show">Show results for:</span>
-<div class="left-one">
-	<span class="categories">All Categories</span>
-	<ul>
-		<li><a href="#">Art &amp; Collectibles</a></li>
-		<li><a href="#">Home &amp; Living</a></li>
-		<li><a href="#">Craft Supplies &amp; Tools</a></li>
-		<li><a href="#">Paper &amp; Party Supplies</a></li>
-		<li><a href="#">Jewelry</a></li>
-		<li><a href="#">Accessories</a></li>
-		<li><a href="#">Pet Supplies</a></li>
-		<li><a href="#">Bags &amp; Purses</a></li>
-		<li><a href="#">Books, Movies &amp; Music</a></li>
-		<li><a href="#">Clothing</a></li>
-		<li><a href="#">Electronics &amp; Accessories</a></li>
-		<li><a href="#">Weddings</a></li>
-		<li><a href="#">Bath &amp; Beauty</a></li>
-		<li><a href="#">Toys &amp; Games</a></li>
-		<li><a href="#">Shoes</a></li>
-	</ul>
-</div>
+	<div class="all-cat">
+		<span class="cat">All Categories</span>
+		<ul>
+			<li><a href="#">Art &amp; Collectibles</a></li>
+			<li><a href="#">Home &amp; Living</a></li>
+			<li><a href="#">Craft Supplies &amp; Tools</a></li>
+			<li><a href="#">Paper &amp; Party Supplies</a></li>
+			<li><a href="#">Jewelry</a></li>
+			<li><a href="#">Accessories</a></li>
+			<li><a href="#">Pet Supplies</a></li>
+			<li><a href="#">Bags &amp; Purses</a></li>
+			<li><a href="#">Books, Movies &amp; Music</a></li>
+			<li><a href="#">Clothing</a></li>
+			<li><a href="#">Electronics &amp; Accessories</a></li>
+			<li><a href="#">Weddings</a></li>
+			<li><a href="#">Bath &amp; Beauty</a></li>
+			<li><a href="#">Toys &amp; Games</a></li>
+			<li><a href="#">Shoes</a></li>
+		</ul>
+	</div>
 </div>
 
-<div class="content">
-</div>
+<div class="content"></div>
 <template id="main-template">
 	{{#each results}}
 		{{>article article=this}}
@@ -76,17 +77,17 @@
 
 <template id="article-partial">
 	<article class="article-all">
-		<div class="article-top">
+		<article class="article-img">
 			<img src="{{ article.Images.[0].url_fullxfull }}" alt="painting">
-		</div>
-		<div class="article-bottom">
+		</article>
+		<article class ="article-bottom">
 			<div class="title">{{ article.title }}</div>
 			<div class="shop_name">{{ article.shop_name }}</div>
 			<div class="price">{{ article.price }} {{ article.currency_code }}</div>
-		</div>
+		</article>
 	</article>
 </template>
-</div>
+
 </div>
 
 <script src="jquery/dist/jquery.min.js"></script>
