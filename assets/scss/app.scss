@@ -16,6 +16,7 @@ $border: #D0D0CB;
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
+  background-color: $page;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -25,31 +26,51 @@ html {
 
 .top {
 	background-color: white;
+	box-shadow: 0 1px 1px 1px $border;
+	height: 80px;
 }
-.title {
-
+.etsy {
+	font-size: 3em;
+	color: $etsy;
+	width: 60%;
+	margin: auto;
+}
+.menu {
+	display: inline-block;
 }
 
-.shop_name {
-
+.top-right {
+	float: right;
+	margin-right: 10em;
 }
-
-.price {
-
+.article-all {
+	border: 1px solid $border;
+	border-radius: 3px;
+	@include span-columns(3);
+}
+.article-top img {
+	width: 228px;
+	height: 172px;
+}
+.article-bottom {
+	background-color: white;
+	width: 225px;
 }
 
 .page {
 	padding: 1em;
-	background-color: $page;
 	padding-left: 5em;
 	@include outer-container;
+}
+
+.categories {
+	font-style: strong;
 }
 
 .left {
 	font-family: Arial,sans-serif;
 	font-size: 13px;
 	padding: 1em;
-	border-radius: .2em;
 	@include span-columns(3);
 }
 
@@ -57,6 +78,7 @@ html {
 	background-color: white;
 	padding: 1em;
 	border: 1px solid $border;
+	border-radius: 3px;
 }
 
 .left li a{
@@ -68,7 +90,7 @@ html {
 .content {
 	background-color: $page;
 	padding-top: 1.65em;
-	@include span-columns(8);
+
 }
 
 img {
