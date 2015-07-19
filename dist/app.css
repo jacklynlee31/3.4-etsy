@@ -1848,17 +1848,50 @@ html {
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-color: #F2F3EE; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
 
 .top {
-  background-color: white; }
+  background-color: white;
+  box-shadow: 0 1px 1px 1px #D0D0CB;
+  height: 80px; }
+
+.etsy {
+  font-size: 3em;
+  color: #F04C06;
+  width: 60%;
+  margin: auto; }
+
+.menu {
+  display: inline-block; }
+
+.top-right {
+  float: right;
+  margin-right: 10em; }
+
+.article-all {
+  border: 1px solid #D0D0CB;
+  border-radius: 3px;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .article-all:last-child {
+    margin-right: 0; }
+
+.article-top img {
+  width: 228px;
+  height: 172px; }
+
+.article-bottom {
+  background-color: white;
+  width: 225px; }
 
 .page {
   padding: 1em;
-  background-color: #F2F3EE;
   padding-left: 5em;
   max-width: 68em;
   margin-left: auto;
@@ -1868,11 +1901,13 @@ html {
     content: "";
     display: table; }
 
+.categories {
+  font-style: strong; }
+
 .left {
   font-family: Arial,sans-serif;
   font-size: 13px;
   padding: 1em;
-  border-radius: .2em;
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -1883,7 +1918,8 @@ html {
 .left-one {
   background-color: white;
   padding: 1em;
-  border: 1px solid #D0D0CB; }
+  border: 1px solid #D0D0CB;
+  border-radius: 3px; }
 
 .left li a {
   color: #4199B9;
@@ -1892,13 +1928,7 @@ html {
 
 .content {
   background-color: #F2F3EE;
-  padding-top: 1.65em;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 65.88078%; }
-  .content:last-child {
-    margin-right: 0; }
+  padding-top: 1.65em; }
 
 img {
   width: 100px; }
