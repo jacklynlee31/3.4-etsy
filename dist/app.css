@@ -1876,6 +1876,9 @@ form {
 .top-right {
   float: right; }
 
+.register, .signin {
+  color: #4199B9; }
+
 [class*="fa fa"] {
   color: #535353;
   font-size: 1.3em; }
@@ -1933,7 +1936,8 @@ form {
   margin-right: 2.35765%;
   width: 23.23176%;
   border: 1px solid #D0D0CB;
-  border-radius: 2px; }
+  border-radius: 2px;
+  background-color: white; }
   .article-all:last-child {
     margin-right: 0; }
   .article-all:nth-child(3) {
@@ -1944,4 +1948,15 @@ img {
   height: 172px; }
 
 .article-bottom {
+  font-size: .8em;
+  font-family: arial;
   background-color: white; }
+
+.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.price {
+  color: #67B733;
+  float: right; }
