@@ -1857,52 +1857,38 @@ html {
 .top {
   background-color: white;
   box-shadow: 0 1px 1px 1px #D0D0CB;
-  height: 80px; }
+  height: 80px;
+  padding-top: 1em;
+  padding-left: 5em;
+  padding-right: 5em; }
 
 .etsy {
-  font-size: 3em;
+  font-size: 2.5em;
   color: #F04C06;
-  width: 60%;
-  margin: auto; }
+  float: left; }
 
-.menu {
-  display: inline-block; }
+form {
+  float: left;
+  padding-left: 4em;
+  font-size: 2em;
+  display: inline; }
 
 .top-right {
-  float: right;
-  margin-right: 10em; }
+  float: right; }
 
-.article-all {
-  border: 1px solid #D0D0CB;
-  border-radius: 3px;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-  .article-all:last-child {
-    margin-right: 0; }
+[class*="fa fa"] {
+  color: #535353;
+  font-size: 1.3em; }
 
-.article-top img {
-  width: 228px;
-  height: 172px; }
-
-.article-bottom {
-  background-color: white;
-  width: 225px; }
-
-.page {
-  padding: 1em;
-  padding-left: 5em;
-  max-width: 68em;
+.main-body {
+  max-width: 1140px;
   margin-left: auto;
-  margin-right: auto; }
-  .page::after {
+  margin-right: auto;
+  padding-top: 2em; }
+  .main-body::after {
     clear: both;
     content: "";
     display: table; }
-
-.categories {
-  font-style: strong; }
 
 .left {
   font-family: Arial,sans-serif;
@@ -1915,20 +1901,47 @@ html {
   .left:last-child {
     margin-right: 0; }
 
-.left-one {
-  background-color: white;
-  padding: 1em;
-  border: 1px solid #D0D0CB;
-  border-radius: 3px; }
+.show {
+  font-weight: bold;
+  padding-bottom: 80px; }
 
-.left li a {
+.all-cat {
+  background-color: white;
+  border: 1px solid #D0D0CB;
+  border-radius: 2px; }
+
+.cat {
+  font-weight: bold; }
+
+.left a {
   color: #4199B9;
   text-decoration: none;
   line-height: 1.4; }
 
-.content {
-  background-color: #F2F3EE;
-  padding-top: 1.65em; }
+.left a:hover {
+  text-decoration: underline; }
+
+.left-two {
+  background-color: white; }
+
+form {
+  font-size: 1px; }
+
+.article-all {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  border: 1px solid #D0D0CB;
+  border-radius: 2px; }
+  .article-all:last-child {
+    margin-right: 0; }
+  .article-all:nth-child(3) {
+    margin-right: 0; }
 
 img {
-  width: 100px; }
+  width: 228px;
+  height: 172px; }
+
+.article-bottom {
+  background-color: white; }
