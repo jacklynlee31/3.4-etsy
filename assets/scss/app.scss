@@ -28,19 +28,23 @@ html {
 	background-color: white;
 	box-shadow: 0 1px 1px 1px $border;
 	height: 80px;
+	padding-top: 1em;
+	padding-left: 5em;
+	padding-right: 5em;
 }
 .etsy {
 	font-size: 2.5em;
 	color: $etsy;
-	width: 60%;
-	margin: auto;
+	float: left;
+}
+form {
+	float:left;
+	padding-left: 4em;
+	font-size: 2em;
+	display: inline;
 }
 .top-right {
-	float: right;
-	margin-right:10em;
-}
-.icon {
-
+	float:right;
 }
 [class*="fa fa"] {
 	color: $icons;
@@ -48,15 +52,22 @@ html {
 }
 .main-body {
 	@include outer-container(1140px);
+	padding-top: 2em;
 }
 .left {
 	font-family: Arial,sans-serif;
 	font-size: 13px;
 	padding: 1em;
-	@include span-columns(2.5);
+	@include span-columns(3);
 }
 .show {
-
+	font-weight: bold;
+	padding-bottom: 80px;
+}
+.all-cat {
+	background-color: white;
+	border: 1px solid $border;
+	border-radius: 2px;
 }
 .cat {
 	font-weight: bold;
@@ -69,9 +80,17 @@ html {
 .left a:hover {
 	text-decoration: underline;
 }
+.left-two {
+	background-color: white;
+}
+form {
+	font-size: 1px;
+}
 .article-all {
 	@include span-columns(3);
+	@include omega(3);
 	border: 1px solid $border;
+	border-radius: 2px;
 }
 img {
 	width: 228px;
