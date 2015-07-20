@@ -45,6 +45,14 @@ form {
 }
 .top-right {
 	float:right;
+	font-family: Arial;
+}
+.top-right a {
+	text-decoration: none;
+	color: $blue;
+}
+.top-right a:hover {
+	text-decoration: underline;
 }
 .register , .signin {
 	color: $blue;
@@ -65,26 +73,33 @@ form {
 }
 .show {
 	font-weight: bold;
-	padding-bottom: 80px;
 }
 .all-cat {
 	background-color: white;
 	border: 1px solid $border;
 	border-radius: 2px;
+	padding: 1em;
 }
 .cat {
 	font-weight: bold;
+	line-height: 2em;
+}
+.all-cat li {
+	text-indent: 1em;
 }
 .left a {
 	color: $blue;
 	text-decoration: none;
-	line-height: 1.4;
+	line-height: 1.9;
 }
 .left a:hover {
 	text-decoration: underline;
 }
 .left-two {
 	background-color: white;
+}
+.item-type {
+	padding: 1em;
 }
 form {
 	font-size: 1px;
@@ -97,8 +112,7 @@ form {
 	background-color: white;
 }
 img {
-	width: 228px;
-	height: 172px;
+	width: 100%;
 }
 .article-bottom {
 	font-size: .8em;
