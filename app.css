@@ -1869,12 +1869,48 @@ html {
 
 form {
   float: left;
-  padding-left: 4em;
-  font-size: 2em;
-  display: inline; }
+  padding-left: 2em;
+  font-size: 2em; }
+
+form input {
+  font-size: .5em;
+  background-color: white;
+  padding: .2em;
+  border: 1px solid #C4C0BC;
+  border-radius: 3px; }
+
+button {
+  color: white;
+  font-weight: bold;
+  background-color: #4199B9;
+  font-size: .5em;
+  padding: .2em;
+  padding-left: .3em;
+  padding-right: .3em;
+  border: 1px solid #F2F3EE;
+  border-radius: 3px; }
+
+.browse {
+  color: #535353;
+  background-color: white;
+  margin-top: .5em;
+  margin-left: 3em;
+  border: 1px solid #D0D0CB;
+  border-radius: 3px;
+  padding: .2em;
+  font-size: .9em;
+  font-weight: normal; }
 
 .top-right {
-  float: right; }
+  float: right;
+  font-family: Arial; }
+
+.top-right a {
+  text-decoration: none;
+  color: #4199B9; }
+
+.top-right a:hover {
+  text-decoration: underline; }
 
 .register, .signin {
   color: #4199B9; }
@@ -1882,6 +1918,12 @@ form {
 [class*="fa fa"] {
   color: #535353;
   font-size: 1.3em; }
+
+.register {
+  float: left; }
+
+.icon {
+  float: right; }
 
 .main-body {
   max-width: 1140px;
@@ -1896,6 +1938,7 @@ form {
 .left {
   font-family: Arial,sans-serif;
   font-size: 13px;
+  color: #4199B9;
   padding: 1em;
   float: left;
   display: block;
@@ -1906,57 +1949,140 @@ form {
 
 .show {
   font-weight: bold;
-  padding-bottom: 80px; }
+  color: #535353;
+  display: block;
+  margin-bottom: 1em; }
 
 .all-cat {
   background-color: white;
+  color: #535353;
   border: 1px solid #D0D0CB;
-  border-radius: 2px; }
+  border-radius: 2px;
+  padding: 1em; }
 
 .cat {
-  font-weight: bold; }
+  font-weight: bold;
+  line-height: 2em; }
+
+.all-cat li {
+  text-indent: 1em; }
 
 .left a {
   color: #4199B9;
   text-decoration: none;
-  line-height: 1.4; }
+  line-height: 1.9; }
 
 .left a:hover {
   text-decoration: underline; }
 
-.left-two {
-  background-color: white; }
+.refine {
+  font-weight: bold;
+  color: #535353;
+  display: block;
+  padding-top: 1em;
+  padding-bottom: 1em; }
 
-form {
-  font-size: 1px; }
+.refine-div {
+  background-color: white;
+  border: 1px solid #D0D0CB;
+  border-radius: 2px;
+  padding: 1em; }
+
+.refine-item, .refine-price, .refine-filter, .refine-order, .refine-shop, .refine-ship {
+  font-weight: bold;
+  color: #535353;
+  line-height: 2em; }
+
+[class*="square"]:nth-of-type(1) {
+  color: red;
+  font-size: 2em; }
+
+[class*="square"]:nth-of-type(2) {
+  color: orange;
+  font-size: 2em; }
+
+[class*="square"]:nth-of-type(3) {
+  color: yellow;
+  font-size: 2em; }
+
+[class*="square"]:nth-of-type(4) {
+  color: #0ac20a;
+  font-size: 2em; }
+
+[class*="square"]:nth-of-type(5) {
+  color: #0cccf3;
+  font-size: 2em; }
+
+[class*="square"]:nth-of-type(6) {
+  color: #a60cf3;
+  font-size: 2em; }
+
+[class*="square"]:nth-of-type(7) {
+  color: black;
+  font-size: 2em; }
+
+[class*="square"]:nth-of-type(8) {
+  color: gray;
+  font-size: 2em; }
+
+.content {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+  margin-right: 0; }
+  .content:last-child {
+    margin-right: 0; }
 
 .article-all {
   float: left;
   display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%;
+  margin-right: 3.16844%;
+  width: 31.22104%;
   border: 1px solid #D0D0CB;
   border-radius: 2px;
-  background-color: white; }
+  background-color: white;
+  margin-bottom: 1.5em; }
   .article-all:last-child {
     margin-right: 0; }
-  .article-all:nth-child(3) {
+  .article-all:nth-child(3n) {
     margin-right: 0; }
+  .article-all:nth-child(3n+1) {
+    clear: left; }
 
-img {
-  width: 228px;
-  height: 172px; }
+.article-img {
+  position: relative;
+  overflow: hidden; }
+  .article-img:before {
+    content: "";
+    display: block;
+    padding-top: 100%; }
+  .article-img img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 100%; }
 
 .article-bottom {
   font-size: .8em;
   font-family: arial;
-  background-color: white; }
+  background-color: white;
+  padding: 1em; }
 
 .title {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
 
+.shop_name {
+  color: #A3A3A3;
+  padding-top: .4em;
+  float: left; }
+
 .price {
   color: #67B733;
-  float: right; }
+  float: right;
+  padding-bottom: 1em;
+  padding-top: .5em; }
