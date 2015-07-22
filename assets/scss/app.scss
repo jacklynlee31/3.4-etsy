@@ -8,7 +8,7 @@ $fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
 $page: #F2F3EE;
 $etsy: #F04C06;
 $blue: #4199B9;
-$icons: #535353;
+$gray: #535353;
 $money: #67B733;
 $shopname: #B5A2A2;
 $border: #D0D0CB;
@@ -39,9 +39,37 @@ html {
 }
 form {
 	float:left;
-	padding-left: 4em;
+	padding-left: 2em;
 	font-size: 2em;
-	display: inline;
+}
+form input {
+	font-size: .5em;
+	background-color: white;
+	padding: .2em;
+	border: 1px solid #C4C0BC;
+	border-radius: 3px;
+}
+button {
+	color: white;
+	font-weight: bold;
+	background-color: $blue;
+	font-size: .5em;
+	padding: .2em;
+	padding-left: .3em;
+	padding-right: .3em;
+	border: 1px solid $page;
+	border-radius: 3px;
+}
+.browse {
+	color: $gray;
+	background-color: white;
+	margin-top: .5em;
+	margin-left: 3em;
+	border: 1px solid $border;
+	border-radius: 3px;
+	padding: .2em;
+	font-size: .9em;
+	font-weight: normal;
 }
 .top-right {
 	float:right;
@@ -58,8 +86,14 @@ form {
 	color: $blue;
 }
 [class*="fa fa"] {
-	color: $icons;
+	color: $gray;
 	font-size: 1.3em;
+}
+.register {
+	float: left;
+}
+.icon {
+	float: right;
 }
 .main-body {
 	@include outer-container(1140px);
@@ -68,14 +102,19 @@ form {
 .left {
 	font-family: Arial,sans-serif;
 	font-size: 13px;
+	color: $blue;
 	padding: 1em;
 	@include span-columns(3);
 }
 .show {
 	font-weight: bold;
+	color: $gray;
+	display: block;
+	margin-bottom: 1em;
 }
 .all-cat {
 	background-color: white;
+	color: $gray;
 	border: 1px solid $border;
 	border-radius: 2px;
 	padding: 1em;
@@ -95,36 +134,112 @@ form {
 .left a:hover {
 	text-decoration: underline;
 }
-.left-two {
-	background-color: white;
+.refine {
+	font-weight: bold;
+	color: $gray;
+	display: block;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
-.item-type {
+.refine-div {
+	background-color: white;
+	border: 1px solid $border;
+	border-radius: 2px;
 	padding: 1em;
 }
-form {
-	font-size: 1px;
+.refine-item, .refine-price, .refine-filter, .refine-order, .refine-shop, .refine-ship {
+	font-weight: bold;
+	color: $gray;
+	line-height: 2em;
+}
+[class*="square"]:nth-of-type(1) {
+	color: red;
+	font-size: 2em;
+}
+[class*="square"]:nth-of-type(2) {
+	color: orange;
+	font-size: 2em;
+}
+[class*="square"]:nth-of-type(3) {
+	color: yellow;
+	font-size: 2em;
+}
+[class*="square"]:nth-of-type(4) {
+	color: #0ac20a;
+	font-size: 2em;
+}
+[class*="square"]:nth-of-type(5) {
+	color: #0cccf3;
+	font-size: 2em;
+}
+[class*="square"]:nth-of-type(6) {
+	color: #a60cf3;
+	font-size: 2em;
+}
+[class*="square"]:nth-of-type(7) {
+	color: black;
+	font-size: 2em;
+}
+[class*="square"]:nth-of-type(8) {
+	color: gray;
+	font-size: 2em;
+}
+
+// .colors, .refine-price, .refine-filter, .refine-order, .refine-shop, .refine-ship:after {
+// 	border-bottom: 1px solid $border;
+// }
+.content {
+	@include span-columns(9);
+	@include omega();
 }
 .article-all {
-	@include span-columns(3);
-	@include omega(3);
+	@include span-columns(3 of 9);
+	@include omega(3n);
 	border: 1px solid $border;
 	border-radius: 2px;
 	background-color: white;
+	margin-bottom: 1.5em;
 }
-img {
-	width: 100%;
+
+.article-img {
+	position: relative;
+	overflow: hidden;
+
+	&:before {
+		content: "";
+		display: block;
+		padding-top: 100%;
+	}
+
+	img {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-height: 100%;
+	}
 }
+
 .article-bottom {
 	font-size: .8em;
 	font-family: arial;
 	background-color: white;
+	padding: 1em;
 }
 .title {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
+.shop_name {
+	color: #A3A3A3;
+	padding-top: .4em;
+	float: left;
+}
 .price {
 	color: $money;
 	float: right;
+	padding-bottom: 1em;
+	padding-top: .5em;
 }
