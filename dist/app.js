@@ -1,36 +1,46 @@
-var timeEl = document.getElementsByClassName('time')[0];
-var buttonEl = document.getElementsByTagName('button')[0];
+var contentEl = document.querySelector('.content');
 
-var interval;
+function registerByQuery (querySelector) {
+	var templateString = document.querySelector(querySelector).innerHTML;
+	templateString = templateString.replace('&gt;' , '>');
 
-function padZeros (num) {
-    if (num < 10) {
-        return '0' + num;
-    }
-    return num;
+	return Handlebars.compile(templateString);
 }
 
-function buttonHasBeenClicked () {
-    window.clearInterval(interval);
+function registerPartialByQuery (name) {
+	var templateString = document.querySelector('#' + name + '-partial').innerHTML;
+	templateString = templateString.replace('&gt;' , '>');
 
-    timeEl.innerHTML = '01:00';
-    buttonEl.innerHTML = 'Reset';
-    var finishTime = new Date().valueOf() + 1000 * 1 * 60;
-
-    var renderTimeSince = function () {
-        var currentTime = new Date().valueOf();
-        var timeDiff = finishTime - currentTime;
-        var secSinceStart =  parseInt(timeDiff / 1000) % 60;
-        var minSinceStart =  parseInt(timeDiff / 60000);
-
-        timeEl.innerHTML = padZeros(minSinceStart) + ':' + padZeros(secSinceStart);
-
-        if (secSinceStart <= 0 && minSinceStart <= 0) {
-            window.clearInterval(interval);
-        }
-    };
-
-    interval = window.setInterval(renderTimeSince, 1000);
+	return Handlebars.registerPartial(name, templateString);
 }
 
-buttonEl.onclick = buttonHasBeenClicked;
+registerPartialByQuery('article');
+
+// Handlebars.registerHelper('my-date', function (dateString) {
+// 	var d = new Date(dateString);
+
+// 	return d.getMonth();
+// });
+
+var handlebarsTemplate = registerByQuery('#main-template');
+
+loadEtsy('painting', function (data) {
+	var allArticles = '';
+
+	allArticles += handlebarsTemplate(data);
+
+	contentEl.innerHTML = allArticles;
+});
+
+
+
+// loadEtsy('whiskey', someFunctionIDeclaredToHandleTheData)
+// load in the results for whiskey and send those results to a
+// function named `someFunctionIDeclaredToHandleTheData
+
+// loadEtsy` is just like today's `loadData` but before our callback we need to pass in a string to say what we want to search for
+
+// {
+//   title: 'hey',
+//   name: 'Mr. T'
+// }

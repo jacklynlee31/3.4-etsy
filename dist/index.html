@@ -1,14 +1,130 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="app.css">
-    <title>3.3-clock</title>
+    	<link rel="stylesheet" href="app.css">
+    <title>Etsy</title>
 </head>
 <body>
+<div class="top">
+	<h2 class="etsy">Etsy</h2>
+	<form>
+		<input type="text" placeholder="painting" required>
+		<a href="#"><button>Search</button></a>
+	</form>
+	<a href="#"><button class="browse">Browse</button></a>
+	<div class="top-right">
+		<span class="register">
+			<a href="#">Register</a>
+		</span>
+		<span class="signin">
+			<a href="#">Sign In</a>
+		</span>
+		<div class="icon">
+			<span class="cart">
+			<i class="fa fa-shopping-cart"></i>
+			Cart
+			</span>
+		</div>
+	</div>
+</div>
 
+<div class="main-body">
+
+<div class="left">
+	<span class="show">Show results for:</span>
+	<div class="all-cat">
+		<span class="cat">All Categories</span>
+		<ul>
+			<li><a href="#">Art &amp; Collectibles</a></li>
+			<li><a href="#">Home &amp; Living</a></li>
+			<li><a href="#">Craft Supplies &amp; Tools</a></li>
+			<li><a href="#">Paper &amp; Party Supplies</a></li>
+			<li><a href="#">Jewelry</a></li>
+			<li><a href="#">Accessories</a></li>
+			<li><a href="#">Pet Supplies</a></li>
+			<li><a href="#">Bags &amp; Purses</a></li>
+			<li><a href="#">Books, Movies &amp; Music</a></li>
+			<li><a href="#">Clothing</a></li>
+			<li><a href="#">Electronics &amp; Accessories</a></li>
+			<li><a href="#">Weddings</a></li>
+			<li><a href="#">Bath &amp; Beauty</a></li>
+			<li><a href="#">Toys &amp; Games</a></li>
+			<li><a href="#">Shoes</a></li>
+		</ul>
+	</div>
+	<span class="refine">Refine your search</span>
+	<div class="refine-div">
+		<h1 class="refine-item">Item Type</h1>
+			<input type="radio" value="none"/>
+			All Items
+			<input type="radio" value="none"/>
+			Handmade
+			<input type="radio" value="none"/>
+			Vintage
+		<h1 class="refine-price">Price</h1>
+			<input type="text" value="$ Low">
+			to
+			<input type="text" value="$ High">
+		<h1 class="refine-filter">Filter by Color</h1>
+		<span class="colors">
+			<i class="fa fa-square"></i>
+			<i class="fa fa-square"></i>
+			<i class="fa fa-square"></i>
+			<i class="fa fa-square"></i>
+			<i class="fa fa-square"></i>
+			<i class="fa fa-square"></i>
+			<i class="fa fa-square"></i>
+			<i class="fa fa-square"></i>
+		</span>
+		<h1 class="refine-order">Ordering Options</h1>
+		<div class="order-checkbox">
+			<input type="checkbox" value="None"/>
+			Accepts Etsy Gift Cards
+			<input type="checkbox" value="None"/>
+			Customizable
+		</div>
+		<h1 class="refine-shop">Shop Location</h1>
+			<input type="radio" value="none"/>
+			Anywhere
+			<input type="radio" value="none"/>
+			United States
+			Choose a custom location
+		<h1 class="refine-ship">Ship To</h1>
+	</div>
+</div>
+
+<div class="content"></div>
+<template id="main-template">
+	{{#each results}}
+		{{>article article=this}}
+	{{/each}}
+</template>
+
+<template id="article-partial">
+	<article class="article-all">
+		<article class="article-img">
+			<img src="{{ article.Images.[0].url_fullxfull }}" alt="painting">
+		</article>
+		<article class ="article-bottom">
+			<div class="title">{{ article.title }}</div>
+			<div class="shop_name">{{ article.Shop.shop_name }}</div>
+			<div class="price">{{ article.price }} {{ article.currency_code }}</div>
+		</article>
+	</article>
+</template>
+
+</div>
+
+<script src="jquery/dist/jquery.min.js"></script>
+<script src="handlebars/handlebars.js"></script>
+<script src="load-etsy.js"></script>
 <script src="app.js"></script>
+<!-- livereload snippet -->
+<script>document.write('<script src="http://'
+ + (location.host || 'localhost').split(':')[0]
+ + ':35729/livereload.js?snipver=1"><\/script>')
+</script>
 </body>
 </html>

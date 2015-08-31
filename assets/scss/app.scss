@@ -5,12 +5,344 @@ $fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
 @import 'bourbon';
 @import 'neat';
 
+$page: #F2F3EE;
+$etsy: #F04C06;
+$blue: #4199B9;
+$gray: #535353;
+$money: #67B733;
+$shopname: #B5A2A2;
+$border: #D0D0CB;
+
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
+  background-color: $page;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
 // Your SASS Journey Starts Here
+
+.top {
+	background-color: white;
+	box-shadow: 0 1px 1px 1px $border;
+	height: 80px;
+	padding-top: 1em;
+	padding-left: 5em;
+	padding-right: 5em;
+}
+.etsy {
+	font-size: 2.5em;
+	color: $etsy;
+	float: left;
+}
+form {
+	float:left;
+	padding-left: 2em;
+	font-size: 2em;
+}
+form input {
+	font-size: .5em;
+	background-color: white;
+	padding: .2em;
+	border: 1px solid #C4C0BC;
+	border-radius: 3px;
+}
+button {
+	color: white;
+	font-weight: normal;
+	background-color: $blue;
+	font-size: .5em;
+	padding: .2em;
+	padding-left: .3em;
+	padding-right: .3em;
+	border: 1px solid $page;
+	border-radius: 3px;
+}
+.browse {
+	color: $gray;
+	background-color: white;
+	margin-top: .5em;
+	margin-left: 3em;
+	border: 1px solid $border;
+	border-radius: 3px;
+	padding: .2em;
+	font-size: .9em;
+	font-weight: normal;
+}
+.top-right {
+	float:right;
+	font-family: Arial;
+	margin-top: .5em;
+}
+.top-right a {
+	text-decoration: none;
+	color: $blue;
+}
+.top-right a:hover {
+	text-decoration: underline;
+}
+.register {
+	color: $blue;
+	padding-right: 2em;
+}
+.signin {
+	color: $blue;
+	background-color: white;
+	border: 1px solid $blue;
+	font-size: .92em;
+	font-weight: normal;
+}
+[class*="fa fa"] {
+	color: $gray;
+	font-size: 1.3em;
+}
+.cart {
+	line-height: 2em;
+	color: $gray;
+}
+.icon {
+	float: right;
+	padding-left: 2em;
+}
+.main-body {
+	@include outer-container(1140px);
+	padding-top: 2em;
+}
+.left {
+	font-family: Arial,sans-serif;
+	font-size: 13px;
+	color: $blue;
+	padding: 1em;
+	@include span-columns(3);
+}
+.show {
+	font-weight: bold;
+	color: $gray;
+	display: block;
+	margin-bottom: 1em;
+}
+.all-cat {
+	background-color: white;
+	color: $gray;
+	border: 1px solid $border;
+	border-radius: 2px;
+	padding: 1em;
+}
+.cat {
+	font-weight: bold;
+	line-height: 2em;
+}
+.all-cat li {
+	text-indent: 1em;
+}
+.left a {
+	color: $blue;
+	text-decoration: none;
+	line-height: 1.9;
+}
+.left a:hover {
+	text-decoration: underline;
+}
+.refine {
+	font-weight: bold;
+	color: $gray;
+	display: block;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+.refine-div {
+	background-color: white;
+	border: 1px solid $border;
+	border-radius: 2px;
+	padding: 1em;
+}
+.refine-item, .refine-price, .refine-filter, .refine-order, .refine-shop, .refine-ship {
+	font-weight: bold;
+	color: $gray;
+	line-height: 2em;
+	padding-top: 1em;
+}
+.low, .high {
+	width: 5em;
+	height: 38px;
+	border-radius: 5px;
+	background-color: white;
+	border: 1px solid #E1E3DF;
+	font-size: 14px;
+}
+[class*="square"]:nth-of-type(1) {
+	color: red;
+	font-size: 2em;
+}
+[class*="square"]:nth-of-type(2) {
+	color: orange;
+	font-size: 2em;
+}
+[class*="square"]:nth-of-type(3) {
+	color: yellow;
+	font-size: 2em;
+}
+[class*="square"]:nth-of-type(4) {
+	color: #0ac20a;
+	font-size: 2em;
+}
+[class*="square"]:nth-of-type(5) {
+	color: #0cccf3;
+	font-size: 2em;
+}
+[class*="square"]:nth-of-type(6) {
+	color: #a60cf3;
+	font-size: 2em;
+}
+[class*="square"]:nth-of-type(7) {
+	color: black;
+	font-size: 2em;
+}
+[class*="square"]:nth-of-type(8) {
+	color: gray;
+	font-size: 2em;
+}
+.country {
+	height: 3em;
+	color: $gray;
+	border-radius: 3px;
+	border: 1px solid $border;
+	padding-left: 1em;
+	font-size: 1em;
+}
+
+// .colors, .refine-price, .refine-filter, .refine-order, .refine-shop, .refine-ship:after {
+// 	border-bottom: 1px solid $border;
+// }
+.content {
+	@include span-columns(9);
+	@include omega();
+}
+.article-all {
+	@include span-columns(3 of 9);
+	@include omega(3n);
+	border: 1px solid $border;
+	border-radius: 2px;
+	background-color: white;
+	margin-bottom: 1.5em;
+}
+
+.article-img {
+	position: relative;
+	overflow: hidden;
+
+	&:before {
+		content: "";
+		display: block;
+		padding-top: 100%;
+	}
+
+	img {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-height: 100%;
+	}
+}
+
+.article-bottom {
+	font-size: .8em;
+	font-family: arial;
+	background-color: white;
+	padding: 1em;
+}
+.title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.shop_name {
+	color: #A3A3A3;
+	padding-top: .4em;
+	float: left;
+}
+.price {
+	color: $money;
+	float: right;
+	padding-bottom: 1em;
+	padding-top: .5em;
+}
+
+// FOOTER
+
+.footer-top {
+	@include outer-container(900px);
+	padding: 2em;
+	margin-top: 4em;
+	padding-top: 3em;
+	border: 10px solid $border;
+	text-align: center;
+	font-family: Georgia;
+	font-size: 18px;
+	font-weight: bold;
+}
+.footer-b {
+	padding-top: 1em;
+}
+.footer-b input {
+	height: 30px;
+	color: $border;
+}
+.footer-b2 {
+	margin: auto;
+	height: 30px;
+	vertical-align: middle;
+	font-size: 16px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.footer a {
+	display: block;
+	color: $blue;
+	text-decoration: none;
+}
+.footer-bottom1 button {
+	display: block;
+	font-size: 13px;
+	border: 1px solid $border;
+}
+.footer-bottom1 {
+	@include span-columns(1 of 5);
+	padding-top: 3em;
+	line-height: 1.5em;
+	padding-left: 4em;
+	padding-bottom: 2em;
+}
+.footer-bottom2 {
+	@include span-columns(1 of 5);
+	padding-top: 3em;
+	line-height: 1.5em;
+	padding-bottom: 2em;
+}
+.footer-bottom3 {
+	@include span-columns(1 of 5);
+	padding-top: 3em;
+	line-height: 1.5em;
+	padding-bottom: 2em;
+}
+.footer-bottom4 {
+	@include span-columns(1 of 5);
+	padding-top: 3em;
+	line-height: 1.5em;
+	padding-bottom: 2em;
+}
+.footer-bottom5 {
+	@include span-columns(1 of 5);
+	padding-top: 3em;
+	line-height: 1.5em;
+	padding-bottom: 2em;
+}
+
+
+
+
+
